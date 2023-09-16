@@ -1,0 +1,137 @@
+.window-titlebar {
+  @include flex-stretch;
+  font-size: var(--font-size-md);
+  height: var(--font-size-lg);
+  -webkit-app-region: drag; // Draggable
+  user-select: none;
+  position: relative;
+  background-color: $blue-600;
+
+  & > section {
+    @include flex-align-center;
+  }
+
+  &-icon {
+    padding: 0.3em 0.65em 0 0.65em;
+
+    img {
+      width: 21px;
+      height: 21px;
+    }
+  }
+
+  .menu {
+    &-item {
+      position: relative;
+    }
+
+    &-item.active {
+      .menu-title {
+        background: $blue-700;
+        color: $gray-300;
+      }
+    }
+
+    &-title {
+      padding: 4px 10px;
+      font-size: 0.8125rem;
+      -webkit-app-region: no-drag;
+      color: $gray-200;
+
+      &:hover {
+        background-color: $blue;
+      }
+    }
+
+    &-popup {
+      display: none;
+      position: fixed;
+      background: $gray-100;
+      min-width: 70px;
+      padding: 0.25rem 0;
+      border: 1px solid $gray-200;
+      box-shadow: 2px 1px 4px var(--shadow-color);
+      z-index: 10000;
+
+      &.active {
+        display: block;
+      }
+
+      &-item {
+        display: flex;
+        justify-content: space-between;
+        font-size: 0.8125rem;
+        padding: 0.375rem 1rem;
+
+        &:hover {
+          background: $blue-600;
+          cursor: pointer;
+
+          .popup-item-name {
+            color: $gray-100;
+          }
+
+          .popup-item-shortcut {
+            color: $blue-200;
+          }
+        }
+      }
+    }
+  }
+
+  .popup-item {
+    &-name {
+      padding-right: 2rem;
+    }
+
+    &-shortcut {
+      color: $gray;
+    }
+
+    &-separator {
+      height: 1px;
+      margin: 4px 0;
+      background: $gray-300;
+    }
+  }
+
+  &-controls {
+    @include flex-stretch;
+    position: absolute;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    color: $gray-200;
+
+    .control {
+      padding: 0 1.15em;
+      font-size: 0.875em;
+      display: flex;
+      height: 100%;
+      align-items: center;
+      -webkit-app-region: no-drag;
+
+      &.close:hover {
+        background: $red-600;
+        color: $gray-200;
+      }
+
+      &:hover {
+        background: $blue-400;
+      }
+    }
+  }
+}
+
+.dark .window-titlebar {
+  .menu-popup {
+    background: $gray-800;
+    border: 1px solid $gray-700;
+  }
+
+  .popup-item {
+    &-separator {
+      background: $gray-700;
+    }
+  }
+}

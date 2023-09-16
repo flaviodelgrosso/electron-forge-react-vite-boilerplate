@@ -1,0 +1,40 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html,
+body {
+  height: 100%;
+  width: 100%;
+  user-select: none;
+}
+
+body {
+  font-family: var(--base-font);
+  font-size: var(--font-size);
+  line-height: 1.5;
+  color: var(--text-color);
+  background-color: var(--background-color);
+  overflow: hidden;
+}
+
+code,
+pre {
+  font-family: var(--base-font-monospace);
+}
+
+li,
+ol {
+  list-style-type: none;
+}
+
+.home {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+}

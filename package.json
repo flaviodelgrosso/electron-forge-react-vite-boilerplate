@@ -1,0 +1,95 @@
+{
+  "name": "electron-forge-react-typescript-boilerplate",
+  "productName": "EFRV Boilerplate",
+  "version": "1.0.0",
+  "description": "Electron-Forge React Vite Boilerplate.",
+  "main": ".vite/build/main.js",
+  "license": "MIT",
+  "scripts": {
+    "start": "cross-env NODE_ENV=development electron-forge start",
+    "package": "electron-forge package",
+    "make": "electron-forge make",
+    "publish": "electron-forge publish",
+    "check-types": "tsc --project tsconfig.json --pretty --noEmit",
+    "check-format": "npm run prettier -- --list-different",
+    "validate-and-build": "npm-run-all --parallel check-types check-format lint build",
+    "validate": "npm-run-all --parallel check-types && lint-staged",
+    "prettier": "prettier --ignore-path .gitignore --write \"**/*.+(js|json|ts|tsx)\"",
+    "format": "npm run prettier -- --write",
+    "lint": "eslint --fix --ext .js,.ts,.tsx ./src --ignore-path .gitignore",
+    "clean": "rimraf node_modules .vite yarn.lock",
+    "postinstall": "husky install",
+    "prepack": "pinst --disable",
+    "postpack": "pinst --enable"
+  },
+  "keywords": [
+    "electron",
+    "react",
+    "typescript",
+    "boilerplate",
+    "electron-forge",
+    "vite"
+  ],
+  "author": {
+    "name": "Flavio Del Grosso",
+    "email": "flaviodelgrosso@live.it"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/flaviodelgrosso/electron-forge-react-typescript-boilerplate.git"
+  },
+  "dependencies": {
+    "electron-squirrel-startup": "^1.0.0",
+    "electron-window-state": "^5.0.3",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "react-router-dom": "^6.16.0"
+  },
+  "devDependencies": {
+    "@electron-forge/cli": "^6.4.2",
+    "@electron-forge/maker-deb": "^6.4.2",
+    "@electron-forge/maker-rpm": "^6.4.2",
+    "@electron-forge/maker-squirrel": "^6.4.2",
+    "@electron-forge/maker-zip": "^6.4.2",
+    "@electron-forge/plugin-auto-unpack-natives": "^6.4.2",
+    "@electron-forge/plugin-vite": "^6.4.2",
+    "@types/react": "^18.2.21",
+    "@types/react-dom": "^18.2.7",
+    "@typescript-eslint/eslint-plugin": "^6.7.0",
+    "@typescript-eslint/parser": "^6.7.0",
+    "@vitejs/plugin-react": "^4.0.4",
+    "classnames": "^2.3.2",
+    "cross-env": "^7.0.3",
+    "electron": "26.2.1",
+    "electron-devtools-installer": "^3.2.0",
+    "eslint": "^8.49.0",
+    "eslint-config-prettier": "^9.0.0",
+    "eslint-import-resolver-typescript": "^3.6.0",
+    "eslint-plugin-import": "^2.28.1",
+    "eslint-plugin-jsx-a11y": "^6.7.1",
+    "eslint-plugin-prettier": "^5.0.0",
+    "eslint-plugin-react": "^7.33.2",
+    "eslint-plugin-react-hooks": "^4.6.0",
+    "husky": "^8.0.0",
+    "lint-staged": "^14.0.1",
+    "npm-run-all": "^4.1.5",
+    "pinst": "^3.0.0",
+    "prettier": "^3.0.3",
+    "sass": "^1.67.0",
+    "ts-node": "^10.9.1",
+    "typescript": "~5.2.2",
+    "vite-plugin-checker": "^0.6.2",
+    "vite-plugin-svgr": "^3.2.0",
+    "vite-tsconfig-paths": "^4.2.1"
+  },
+  "eslintConfig": {
+    "extends": [
+      "react-app"
+    ]
+  },
+  "lint-staged": {
+    "*.+(ts|tsx)": [
+      "npm run lint"
+    ]
+  }
+}

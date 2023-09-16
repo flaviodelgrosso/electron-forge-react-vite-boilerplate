@@ -1,0 +1,59 @@
+@font-face {
+  font-family: 'Titillium';
+  src: url('../../../assets/fonts/titillium/TitilliumWeb-Regular.ttf');
+}
+
+:root {
+  --text-color: #{$gray-900};
+  --text-secondary-color: #{$gray-500};
+  --background-color: #{$white};
+
+  // Buttons
+  --button-height: 25px;
+
+  --button-background: #{$blue};
+  --button-border-radius: 2px;
+  --button-hover-background: #{lighten($blue, 5%)};
+  --button-text-color: #{$white};
+  --button-focus-border-color: #{$blue-600};
+
+  --link-button-color: #{$blue};
+  --link-button-hover-color: #{$blue-600};
+  --link-button-selected-hover-color: #{$blue-200};
+
+  --secondary-button-background: #{$gray-000};
+  --secondary-button-hover-background: #{$white};
+  --secondary-button-text-color: var(--text-color);
+  --secondary-button-focus-shadow-color: #{rgba($gray-200, 0.75)};
+  --secondary-button-focus-border-color: #{$gray-300};
+
+  // Typography
+  $fallback_fonts: 'Apple Color Emoji', 'Segoe UI', 'Segoe UI Emoji', 'Segoe UI Symbol';
+  --base-font: 'Titillium', sans-serif, #{$fallback_fonts};
+  --base-font-monospace: SFMono-Regular, Consolas, Liberation Mono, Menlo, monospace, #{$fallback_fonts};
+
+  --font-size-xs: 9px;
+  --font-size: 12px;
+  --font-size-sm: 11px;
+  --font-size-md: 14px;
+  --font-size-lg: 28px;
+  --font-size-xl: 32px;
+  --font-size-xxl: 42px;
+
+  --spacing: 10px;
+  --spacing-double: calc(var(--spacing) * 2);
+  --spacing-triple: calc(var(--spacing) * 3);
+  --spacing-quad: calc(var(--spacing) * 4);
+  --spacing-quint: calc(var(--spacing) * 5);
+  --spacing-half: calc(var(--spacing) / 2);
+  --spacing-third: calc(var(--spacing) / 3);
+
+  --border-radius: 4px;
+  --base-border: 1px solid #{$gray-200};
+
+  --shadow-color: rgba(71, 83, 95, 0.19);
+  --base-box-shadow: 0 2px 7px var(--shadow-color);
+
+  --box-background-color: #{$gray-100};
+  --box-background-secondary-color: #{darken($gray-100, 1%)};
+}
