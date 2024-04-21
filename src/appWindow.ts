@@ -51,7 +51,11 @@ export function createAppWindow(): BrowserWindow {
   appWindow = new BrowserWindow(windowOptions);
 
   // Load the index.html of the app window.
-  appWindow.loadURL(MAIN_WINDOW_VITE_DEV_SERVER_URL);
+  if (MAIN_WINDOW_VITE_DEV_SERVER_URL) {
+    appWindow.loadURL(MAIN_WINDOW_VITE_DEV_SERVER_URL);
+  } else {
+    appWindow.loadFile(path.join(__dirname, `../renderer/${MAIN_WINDOW_VITE_NAME}/index.html`));
+  }
 
   // Build the application menu
   const menu = Menu.buildFromTemplate(appMenu);
