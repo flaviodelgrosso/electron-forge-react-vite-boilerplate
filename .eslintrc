@@ -2,8 +2,9 @@
   "env": {
     "browser": true,
     "es6": true,
-    "node": true
+    "node": true,
   },
+  "ignorePatterns": ["node_modules/", "dist/", "build/", "coverage/", "/config"],
   "plugins": ["prettier"],
   "extends": [
     "eslint:recommended",
@@ -12,10 +13,11 @@
     "plugin:@typescript-eslint/recommended",
     "plugin:import/electron",
     "plugin:import/typescript",
+    "plugin:import/recommended",
     "plugin:import/errors",
     "plugin:import/warnings",
     "plugin:react/recommended",
-    "plugin:jsx-a11y/recommended"
+    "plugin:jsx-a11y/recommended",
   ],
   "parser": "@typescript-eslint/parser",
   "rules": {
@@ -28,15 +30,15 @@
         "newlines-between": "always",
         "alphabetize": {
           "order": "asc",
-          "caseInsensitive": true
-        }
-      }
+          "caseInsensitive": true,
+        },
+      },
     ],
     "jsx-a11y/no-noninteractive-element-interactions": [
       "error",
       {
-        "handlers": ["onClick", "onMouseDown", "onMouseUp", "onKeyPress", "onKeyDown", "onKeyUp"]
-      }
+        "handlers": ["onClick", "onMouseDown", "onMouseUp", "onKeyPress", "onKeyDown", "onKeyUp"],
+      },
     ],
     "import/default": "off",
     "import/no-named-as-default-member": "off",
@@ -48,16 +50,16 @@
       {
         "argsIgnorePattern": "^_",
         "varsIgnorePattern": "^_",
-        "caughtErrorsIgnorePattern": "^_"
-      }
+        "caughtErrorsIgnorePattern": "^_",
+      },
     ],
     "@typescript-eslint/ban-types": [
       "error",
       {
         "types": {
-          "Function": false
-        }
-      }
+          "Function": false,
+        },
+      },
     ],
     "@typescript-eslint/explicit-function-return-type": ["off"],
     "@typescript-eslint/explicit-module-boundary-types": ["off"],
@@ -67,16 +69,16 @@
       "error",
       {},
       {
-        "usePrettierrc": true
-      }
-    ]
+        "usePrettierrc": true,
+      },
+    ],
   },
   "settings": {
     "import/resolver": {
-      "typescript": {}
+      "typescript": {},
     },
     "react": {
-      "version": "detect"
-    }
-  }
+      "version": "detect",
+    },
+  },
 }
