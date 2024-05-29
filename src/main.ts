@@ -4,7 +4,7 @@ import installExtension, { REACT_DEVELOPER_TOOLS } from 'electron-devtools-insta
 
 import { createAppWindow } from './appWindow';
 
-process.env['ELECTRON_DISABLE_SECURITY_WARNINGS'] = 'true';
+process.env.ELECTRON_DISABLE_SECURITY_WARNINGS = 'true';
 
 /** Handle creating/removing shortcuts on Windows when installing/uninstalling. */
 if (require('electron-squirrel-startup')) {
