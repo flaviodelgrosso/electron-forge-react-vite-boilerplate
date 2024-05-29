@@ -17,6 +17,5 @@
       "src/*": ["./src/*"],
       "ui/*": ["./src/ui/*"]
     }
-  },
-  "include": ["src", "forge.config.ts"]
+  }
 }
