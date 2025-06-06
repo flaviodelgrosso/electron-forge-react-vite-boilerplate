@@ -1,4 +1,4 @@
-import { RefObject, useEffect, useRef } from 'react';
+import { type RefObject, useEffect, useRef } from 'react';
 
 // Window Event based useEventListener interface
 function useEventListener<K extends keyof WindowEventMap>(
@@ -9,7 +9,10 @@ function useEventListener<K extends keyof WindowEventMap>(
 ): void;
 
 // Element Event based useEventListener interface
-function useEventListener<K extends keyof HTMLElementEventMap, T extends HTMLElement = HTMLDivElement>(
+function useEventListener<
+  K extends keyof HTMLElementEventMap,
+  T extends HTMLElement = HTMLDivElement,
+>(
   eventName: K,
   handler: (event: HTMLElementEventMap[K]) => void,
   element: RefObject<T>,
@@ -27,7 +30,7 @@ function useEventListener<K extends keyof DocumentEventMap>(
 function useEventListener<
   KW extends keyof WindowEventMap,
   KH extends keyof HTMLElementEventMap,
-  T extends HTMLElement | void = void,
+  T extends HTMLElement | undefined = undefined,
 >(
   eventName: KW | KH,
   handler: (event: WindowEventMap[KW] | HTMLElementEventMap[KH] | Event) => void,
@@ -44,7 +47,7 @@ function useEventListener<
   useEffect(() => {
     // Define the listening target
     const targetElement: T | Window = element?.current || window;
-    if (!(targetElement && targetElement.addEventListener)) {
+    if (!targetElement?.addEventListener) {
       return;
     }
 

@@ -1,9 +1,9 @@
-import { ConfigEnv, defineConfig } from 'vite';
+import { type ConfigEnv, defineConfig } from 'vite';
 import svgrPlugin from 'vite-plugin-svgr';
 
-import { productName, version } from '../package.json';
 import { checker } from 'vite-plugin-checker';
 import viteTsconfigPaths from 'vite-tsconfig-paths';
+import { productName, version } from '../package.json';
 import { pluginExposeRenderer } from './vite.base.config';
 
 // https://vitejs.dev/config
@@ -29,8 +29,8 @@ export default defineConfig((env) => {
       viteTsconfigPaths(),
       checker({
         typescript: true,
-        eslint: {
-          lintCommand: 'eslint "./**/*.{ts,tsx}"',
+        biome: {
+          command: 'check',
         },
       }),
     ],

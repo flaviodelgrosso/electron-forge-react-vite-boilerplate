@@ -1,9 +1,11 @@
 import classNames from 'classnames';
-import React from 'react';
+import type React from 'react';
 
 interface IControlButtonProps {
   name: string;
-  onClick: React.MouseEventHandler<HTMLDivElement> | React.KeyboardEventHandler<HTMLDivElement>;
+  onClick:
+    | React.MouseEventHandler<HTMLButtonElement>
+    | React.KeyboardEventHandler<HTMLButtonElement>;
   path: string;
 }
 
@@ -12,19 +14,19 @@ const ControlButton: React.FC<IControlButtonProps> = ({ name, onClick, path }) =
   const title = name[0].toUpperCase() + name.substring(1);
 
   return (
-    <div
-      role='button'
+    <button
+      type="button"
       aria-label={name}
       className={className}
-      onClick={onClick as React.MouseEventHandler<HTMLDivElement>}
-      onKeyDown={onClick as React.KeyboardEventHandler<HTMLDivElement>}
+      onClick={onClick as React.MouseEventHandler<HTMLButtonElement>}
+      onKeyDown={onClick as React.KeyboardEventHandler<HTMLButtonElement>}
       title={title}
       tabIndex={0}
     >
-      <svg aria-hidden='true' version='1.1' width='10' height='10'>
-        <path fill='currentColor' d={path} />
+      <svg aria-hidden="true" version="1.1" width="10" height="10">
+        <path fill="currentColor" d={path} />
       </svg>
-    </div>
+    </button>
   );
 };
 

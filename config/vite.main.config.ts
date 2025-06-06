@@ -2,7 +2,7 @@ import type { ConfigEnv, UserConfig } from 'vite';
 import { defineConfig, mergeConfig } from 'vite';
 import { checker } from 'vite-plugin-checker';
 import viteTsconfigPaths from 'vite-tsconfig-paths';
-import { getBuildConfig, getBuildDefine, external, pluginHotRestart } from './vite.base.config';
+import { external, getBuildConfig, getBuildDefine, pluginHotRestart } from './vite.base.config';
 
 // https://vitejs.dev/config
 export default defineConfig((env) => {
@@ -12,9 +12,9 @@ export default defineConfig((env) => {
   const config: UserConfig = {
     build: {
       lib: {
-        entry: forgeConfigSelf.entry!,
+        entry: forgeConfigSelf.entry,
         fileName: () => '[name].js',
-        formats: ['cjs'],
+        formats: ['cjs', 'es'],
       },
       rollupOptions: {
         external,
@@ -25,8 +25,8 @@ export default defineConfig((env) => {
       viteTsconfigPaths(),
       checker({
         typescript: true,
-        eslint: {
-          lintCommand: 'eslint "./**/*.{ts,tsx}"',
+        biome: {
+          command: 'check',
         },
       }),
     ],
