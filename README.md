@@ -12,7 +12,7 @@ This is a boilerplate project for Electron-Forge with React, Typescript, and Vit
 - Preload script with a minimal set of methods exposed from Electron's `ipcRenderer` to support communication to main process.
 - Window state manager.
 - Simple React application using SASS stylings.
-- ESLint and Prettier configuration
+- Linting and formatting using [biomejs](https://biomejs.dev/).
 - Husky to handle git hooks
 
 ## Screenshots
