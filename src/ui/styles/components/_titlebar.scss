@@ -1,14 +1,17 @@
+@use "../colors";
+@use "../mixins/flexbox";
+
 .window-titlebar {
-  @include flex-stretch;
+  @include flexbox.flex-stretch;
   font-size: var(--font-size-md);
   height: var(--font-size-lg);
   -webkit-app-region: drag; // Draggable
   user-select: none;
   position: relative;
-  background-color: $blue-600;
+  background-color: colors.$blue-600;
 
   & > section {
-    @include flex-align-center;
+    @include flexbox.flex-align-center;
   }
 
   &-icon {
@@ -27,8 +30,8 @@
 
     &-item.active {
       .menu-title {
-        background: $blue-700;
-        color: $gray-300;
+        background: colors.$blue-700;
+        color: colors.$gray-300;
       }
     }
 
@@ -36,20 +39,20 @@
       padding: 4px 10px;
       font-size: 0.8125rem;
       -webkit-app-region: no-drag;
-      color: $gray-200;
+      color: colors.$gray-200;
 
       &:hover {
-        background-color: $blue;
+        background-color: colors.$blue;
       }
     }
 
     &-popup {
       display: none;
       position: fixed;
-      background: $gray-100;
+      background: colors.$gray-100;
       min-width: 70px;
       padding: 0.25rem 0;
-      border: 1px solid $gray-200;
+      border: 1px solid colors.$gray-200;
       box-shadow: 2px 1px 4px var(--shadow-color);
       z-index: 10000;
 
@@ -64,15 +67,15 @@
         padding: 0.375rem 1rem;
 
         &:hover {
-          background: $blue-600;
+          background: colors.$blue-600;
           cursor: pointer;
 
           .popup-item-name {
-            color: $gray-100;
+            color: colors.$gray-100;
           }
 
           .popup-item-shortcut {
-            color: $blue-200;
+            color: colors.$blue-200;
           }
         }
       }
@@ -85,23 +88,23 @@
     }
 
     &-shortcut {
-      color: $gray;
+      color: colors.$gray;
     }
 
     &-separator {
       height: 1px;
       margin: 4px 0;
-      background: $gray-300;
+      background: colors.$gray-300;
     }
   }
 
   &-controls {
-    @include flex-stretch;
+    @include flexbox.flex-stretch;
     position: absolute;
     right: 0;
     top: 0;
     bottom: 0;
-    color: $gray-200;
+    color: colors.$gray-200;
 
     .control {
       padding: 0 1.15em;
@@ -112,12 +115,12 @@
       -webkit-app-region: no-drag;
 
       &.close:hover {
-        background: $red-600;
-        color: $gray-200;
+        background: colors.$red-600;
+        color: colors.$gray-200;
       }
 
       &:hover {
-        background: $blue-400;
+        background: colors.$blue-400;
       }
     }
   }
@@ -125,13 +128,13 @@
 
 .dark .window-titlebar {
   .menu-popup {
-    background: $gray-800;
-    border: 1px solid $gray-700;
+    background: colors.$gray-800;
+    border: 1px solid colors.$gray-700;
   }
 
   .popup-item {
     &-separator {
-      background: $gray-700;
+      background: colors.$gray-700;
     }
   }
 }
