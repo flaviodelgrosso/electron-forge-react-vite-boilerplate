@@ -14,7 +14,7 @@ if (squirrelStartup) {
 
 app.whenReady().then(() => {
   installExtension(REACT_DEVELOPER_TOOLS)
-    .then((name) => console.info(`Added Extension:  ${name}`))
+    .then((extension) => console.info(`Added Extension:  ${extension.name}`))
     .catch((err) => console.info('An error occurred: ', err));
 });
 
