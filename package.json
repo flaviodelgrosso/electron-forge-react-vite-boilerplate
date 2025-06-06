@@ -27,7 +27,12 @@
     "clean": "rimraf node_modules .vite pnpm-lock.yaml",
     "postinstall": "husky",
     "prepack": "pinst --disable",
-    "postpack": "pinst --enable"
+    "postpack": "pinst --enable",
+    "release": "standard-version",
+    "major": "npm run release -- --release-as major",
+    "minor": "npm run release -- --release-as minor",
+    "patch": "npm run release -- --release-as patch",
+    "push-release": "git push --follow-tags origin master"
   },
   "dependencies": {
     "electron-squirrel-startup": "^1.0.1",
@@ -63,6 +68,7 @@
     "pinst": "^3.0.0",
     "rimraf": "^6.0.1",
     "sass": "1.89.1",
+    "standard-version": "^9.5.0",
     "ts-node": "10.9.2",
     "typescript": "~5.8.3",
     "vite": "^6.3.5",
