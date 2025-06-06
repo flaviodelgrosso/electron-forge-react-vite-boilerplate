@@ -6,8 +6,20 @@
   "main": ".vite/build/main.js",
   "license": "MIT",
   "packageManager": "pnpm@10.11.0",
+  "type": "module",
+  "keywords": ["electron", "react", "typescript", "boilerplate", "electron-forge", "vite"],
+  "author": {
+    "name": "Flavio Del Grosso"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/flaviodelgrosso/electron-forge-react-typescript-boilerplate.git"
+  },
+  "pnpm": {
+    "onlyBuiltDependencies": ["electron"]
+  },
   "scripts": {
-    "start": "cross-env NODE_ENV=development electron-forge start",
+    "dev": "cross-env NODE_ENV=development electron-forge start",
     "package": "electron-forge package",
     "make": "electron-forge make",
     "publish": "electron-forge publish",
@@ -16,14 +28,6 @@
     "postinstall": "husky",
     "prepack": "pinst --disable",
     "postpack": "pinst --enable"
-  },
-  "keywords": ["electron", "react", "typescript", "boilerplate", "electron-forge", "vite"],
-  "author": {
-    "name": "Flavio Del Grosso"
-  },
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/flaviodelgrosso/electron-forge-react-typescript-boilerplate.git"
   },
   "dependencies": {
     "electron-squirrel-startup": "^1.0.1",
@@ -46,6 +50,7 @@
     "@electron-forge/plugin-vite": "^7.8.1",
     "@electron-forge/shared-types": "^7.8.1",
     "@electron/fuses": "^1.8.0",
+    "@types/electron-squirrel-startup": "^1.0.2",
     "@types/react": "^19.1.6",
     "@types/react-dom": "^19.1.6",
     "@vitejs/plugin-react": "4.5.1",
