@@ -14,7 +14,7 @@ export default defineConfig((env) => {
       lib: {
         entry: forgeConfigSelf.entry,
         fileName: () => '[name].js',
-        formats: ['cjs', 'es'],
+        formats: ['es'],
       },
       rollupOptions: {
         external,
