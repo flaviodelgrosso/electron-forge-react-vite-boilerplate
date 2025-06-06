@@ -1,0 +1,9 @@
+{
+  "recommendations": [
+    "EditorConfig.EditorConfig",
+    "usernamehw.errorlens",
+    "esbenp.prettier-vscode",
+    "biomejs.biome",
+    "meganrogge.template-string-converter"
+  ]
+}
