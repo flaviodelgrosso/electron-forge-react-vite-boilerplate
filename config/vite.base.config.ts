@@ -5,7 +5,7 @@ import type { ConfigEnv, Plugin, UserConfig } from 'vite';
 
 import pkg from '../package.json';
 
-export const builtins = ['electron', ...builtinModules.map((m) => [m, `node:${m}`]).flat()];
+export const builtins = ['electron', ...builtinModules.flatMap((m) => [m, `node:${m}`])];
 
 export const external = [
   ...builtins,
@@ -40,22 +40,26 @@ export function getDefineKeys(names: string[]) {
       VITE_NAME: `${NAME}_VITE_NAME`,
     };
 
-    return { ...acc, [name]: keys };
+    acc[name] = keys;
+    return acc;
   }, define);
 }
 
 export function getBuildDefine(env: ConfigEnv<'build'>) {
   const { command, forgeConfig } = env;
-  const names = forgeConfig.renderer.filter(({ name }) => name != null).map(({ name }) => name as string);
+  const names = forgeConfig.renderer
+    .filter(({ name }) => name != null)
+    .map(({ name }) => name as string);
   const defineKeys = getDefineKeys(names);
   const define = Object.entries(defineKeys).reduce(
     (acc, [name, keys]) => {
       const { VITE_DEV_SERVER_URL, VITE_NAME } = keys;
       const def = {
-        [VITE_DEV_SERVER_URL]: command === 'serve' ? JSON.stringify(process.env[VITE_DEV_SERVER_URL]) : undefined,
+        [VITE_DEV_SERVER_URL]:
+          command === 'serve' ? JSON.stringify(process.env[VITE_DEV_SERVER_URL]) : undefined,
         [VITE_NAME]: JSON.stringify(name),
       };
-      return { ...acc, ...def };
+      return Object.assign(acc, def);
     },
     {} as Record<string, unknown>,
   );

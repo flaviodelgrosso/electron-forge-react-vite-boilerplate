@@ -1,6 +1,6 @@
 import { useEffect } from 'react';
 
-import { RendererListener } from 'src/preload';
+import type { RendererListener } from 'src/preload';
 
 export const useRendererListener = (channel: string, listener: RendererListener) => {
   useEffect(() => {
@@ -8,5 +8,5 @@ export const useRendererListener = (channel: string, listener: RendererListener)
     return () => {
       electron.ipcRenderer.removeListener(channel, listener);
     };
-  }, []);
+  }, [channel, listener]);
 };

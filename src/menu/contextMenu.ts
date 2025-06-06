@@ -1,6 +1,6 @@
 import { ipcRenderer } from 'electron';
 
-import { ClickHandler } from 'src/webContents';
+import type { ClickHandler } from 'src/webContents';
 
 export interface IMenuItem {
   readonly id?: string;
@@ -57,7 +57,7 @@ export async function showContextualMenu(items: ReadonlyArray<IMenuItem>) {
 function serializeMenuItems(items: ReadonlyArray<IMenuItem>): ReadonlyArray<ISerializableMenuItem> {
   return items.map((item) => ({
     ...item,
-    action: undefined,
+    action: undefined as undefined,
     submenu: item.submenu ? serializeMenuItems(item.submenu) : undefined,
   }));
 }

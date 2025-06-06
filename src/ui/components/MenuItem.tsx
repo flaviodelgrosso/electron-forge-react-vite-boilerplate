@@ -1,32 +1,38 @@
-import React, { forwardRef } from 'react';
+import type React from 'react';
+import { forwardRef } from 'react';
 
 interface IMenuItemProps {
   label: string;
   submenu?: Electron.MenuItemConstructorOptions[];
-  onMenuClick: (e: React.MouseEvent<HTMLDivElement>) => void;
-  onMenuMouseEnter: (e: React.MouseEvent<HTMLDivElement>) => void;
-  onMenuMouseDown: (e: React.MouseEvent<HTMLDivElement>) => void;
+  onMenuClick: (e: React.MouseEvent<HTMLButtonElement>) => void;
+  onMenuMouseEnter: (e: React.MouseEvent<HTMLButtonElement>) => void;
+  onMenuMouseDown: (e: React.MouseEvent<HTMLButtonElement>) => void;
 }
 
 const PopupItem = forwardRef<HTMLDivElement, Partial<IMenuItemProps>>(({ submenu }, ref) => (
-  <div className='menu-popup' ref={ref}>
+  <div className="menu-popup" ref={ref}>
     {submenu?.map((menuItem, menuItemIndex) => {
       if (menuItem.type === 'separator') {
-        return <div key={`menu_${menuItemIndex}_popup_item_${menuItemIndex}`} className='popup-item-separator' />;
+        return (
+          <div
+            key={`menu_${menuItemIndex}_popup_item_${menuItemIndex + 1}`}
+            className="popup-item-separator"
+          />
+        );
       }
 
       return (
-        <div
-          key={`menu_${menuItemIndex}_popup_item_${menuItemIndex}`}
-          className='menu-popup-item'
+        <button
+          key={`menu_${menuItemIndex}_popup_item_${menuItemIndex + 1}`}
+          className="menu-popup-item"
           onMouseDown={(e) => e.preventDefault()}
           onKeyDown={(e) => e.preventDefault()}
-          role='button'
+          type="button"
           tabIndex={0}
         >
-          <div className='popup-item-name'>{menuItem.label}</div>
-          <div className='popup-item-shortcut'>{menuItem.accelerator}</div>
-        </div>
+          <div className="popup-item-name">{menuItem.label}</div>
+          <div className="popup-item-shortcut">{menuItem.accelerator}</div>
+        </button>
       );
     })}
   </div>
@@ -41,18 +47,18 @@ export const MenuItem: React.FC<IMenuItemProps> = ({
   onMenuMouseDown,
   onMenuMouseEnter,
 }) => (
-  <div className='menu-item'>
-    <div
-      className='menu-title'
+  <div className="menu-item">
+    <button
+      className="menu-title"
       onClick={onMenuClick}
       onMouseEnter={onMenuMouseEnter}
       onMouseDown={onMenuMouseDown}
       onKeyDown={(e) => e.preventDefault()}
-      role='button'
+      type="button"
       tabIndex={0}
     >
       {label}
-    </div>
+    </button>
     <PopupItem {...{ submenu }} />
   </div>
 );

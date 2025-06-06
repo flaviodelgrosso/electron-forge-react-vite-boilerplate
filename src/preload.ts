@@ -1,4 +1,4 @@
-import { contextBridge, ipcRenderer, IpcRendererEvent } from 'electron';
+import { type IpcRendererEvent, contextBridge, ipcRenderer } from 'electron';
 
 const versions: Record<string, unknown> = {};
 
@@ -15,7 +15,7 @@ function validateIPC(channel: string) {
   return true;
 }
 
-export type RendererListener = (event: IpcRendererEvent, ...args: any[]) => void;
+export type RendererListener = (event: IpcRendererEvent, ...args: unknown[]) => void;
 
 export const globals = {
   /** Processes versions **/
@@ -26,13 +26,13 @@ export const globals = {
    * to support communication to main process.
    */
   ipcRenderer: {
-    send(channel: string, ...args: any[]) {
+    send(channel: string, ...args: unknown[]) {
       if (validateIPC(channel)) {
         ipcRenderer.send(channel, ...args);
       }
     },
 
-    invoke(channel: string, ...args: any[]) {
+    invoke(channel: string, ...args: unknown[]) {
       if (validateIPC(channel)) {
         return ipcRenderer.invoke(channel, ...args);
       }

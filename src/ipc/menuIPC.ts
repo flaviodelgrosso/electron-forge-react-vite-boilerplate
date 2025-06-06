@@ -1,4 +1,4 @@
-import { BrowserWindow, ipcMain, Menu, shell } from 'electron';
+import { BrowserWindow, Menu, ipcMain, shell } from 'electron';
 
 import { MenuChannels } from 'src/channels/menuChannels';
 

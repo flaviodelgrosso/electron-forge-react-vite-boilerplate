@@ -1,0 +1,3 @@
+{
+  "{src,config}/**/*.ts": "npm run check"
+}

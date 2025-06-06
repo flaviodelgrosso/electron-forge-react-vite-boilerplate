@@ -1,13 +1,14 @@
-import { app, BrowserWindow } from 'electron';
+import { BrowserWindow, app } from 'electron';
 
 import installExtension, { REACT_DEVELOPER_TOOLS } from 'electron-devtools-installer';
+import squirrelStartup from 'electron-squirrel-startup';
 
 import { createAppWindow } from './appWindow';
 
 process.env.ELECTRON_DISABLE_SECURITY_WARNINGS = 'true';
 
 /** Handle creating/removing shortcuts on Windows when installing/uninstalling. */
-if (require('electron-squirrel-startup')) {
+if (squirrelStartup) {
   app.quit();
 }
 
