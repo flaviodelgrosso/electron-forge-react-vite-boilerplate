@@ -1,4 +1,5 @@
 import path from 'node:path';
+import { fileURLToPath } from 'node:url';
 import { BrowserWindow, Menu, app } from 'electron';
 
 import windowStateKeeper from 'electron-window-state';
@@ -6,6 +7,9 @@ import windowStateKeeper from 'electron-window-state';
 import { registerMenuIpc } from 'src/ipc/menuIPC';
 import appMenu from 'src/menu/appMenu';
 import { registerWindowStateChangedEvents } from 'src/windowState';
+
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = path.dirname(__filename);
 
 let appWindow: BrowserWindow;
 
