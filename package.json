@@ -11,7 +11,7 @@
     "package": "electron-forge package",
     "make": "electron-forge make",
     "publish": "electron-forge publish",
-    "check": "biome check src/**/*.ts",
+    "check": "biome check --write",
     "clean": "rimraf node_modules .vite pnpm-lock.yaml",
     "postinstall": "husky",
     "prepack": "pinst --disable",
