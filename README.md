@@ -165,7 +165,7 @@ We love contributions! Please see our [Contributing Guide](./CONTRIBUTING.md) fo
 
 ## 📄 License
 
-This project is licensed under the [ISC License](./LICENSE) - feel free to use it for your own projects!
+This project is licensed under the [MIT License](./LICENSE) - feel free to use it for your own projects!
 
 ---
 
