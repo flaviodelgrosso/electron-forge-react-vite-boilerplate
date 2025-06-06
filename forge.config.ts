@@ -9,7 +9,7 @@ import { VitePlugin } from '@electron-forge/plugin-vite';
 import type { ForgeConfig } from '@electron-forge/shared-types';
 import { FuseV1Options, FuseVersion } from '@electron/fuses';
 
-import { productName } from './package.json';
+import { author, productName } from './package.json';
 
 const rootDir = process.cwd();
 
@@ -20,7 +20,7 @@ const config: ForgeConfig = {
     // Set executable name
     executableName: productName,
     // Set application copyright
-    appCopyright: 'Copyright (C) 2024 Flavio Del Grosso',
+    appCopyright: `Copyright © ${new Date().getFullYear()} ${author.name}`,
     // Set application icon
     icon: path.resolve(rootDir, 'assets/icons/icon'),
   },
