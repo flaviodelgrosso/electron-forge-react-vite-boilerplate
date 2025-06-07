@@ -27,11 +27,6 @@ export default function App() {
                   <WindowControls windowState={windowState} />
                 </>
               )}
-              {__DARWIN__ && (
-                <div className="flex-1 h-8 flex items-center justify-center">
-                  <span className="text-sm text-foreground/60">{__APP_NAME__}</span>
-                </div>
-              )}
             </>
           )}
         </Titlebar>

@@ -1,4 +1,3 @@
-import classNames from 'classnames';
 import type React from 'react';
 import { useState } from 'react';
 
@@ -27,12 +26,7 @@ export default function Titlebar({ children }: ITitleBarProps) {
   }
 
   return (
-    <div
-      onDoubleClick={handleDoubleClick}
-      className={classNames('window-titlebar', {
-        darwin: __DARWIN__,
-      })}
-    >
+    <div onDoubleClick={handleDoubleClick} className="window-titlebar">
       {children(windowState)}
     </div>
   );

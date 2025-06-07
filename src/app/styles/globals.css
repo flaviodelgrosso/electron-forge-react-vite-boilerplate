@@ -163,7 +163,7 @@
 @layer components {
   /* Window Titlebar Styles */
   .window-titlebar {
-    @apply flex items-stretch bg-primary select-none sticky top-0 z-50;
+    @apply flex items-stretch h-8 bg-background select-none sticky top-0 z-50;
     -webkit-app-region: drag;
   }
 
@@ -179,11 +179,6 @@
     @apply w-5 h-5;
   }
 
-  /* macOS-specific titlebar styling */
-  .window-titlebar.darwin {
-    @apply bg-background border-b border-border/50;
-  }
-
   /* Menu Styles */
   .menu-item {
     @apply relative;
@@ -194,12 +189,12 @@
   }
 
   .menu-title {
-    @apply hover:bg-secondary px-2.5 py-1 text-xs;
+    @apply hover:bg-secondary px-2.5 py-2 text-xs;
     -webkit-app-region: no-drag;
   }
 
   .menu-popup {
-    @apply hidden fixed bg-popover border border-border z-10000 min-w-20;
+    @apply hidden fixed bg-popover z-10000 min-w-20;
   }
 
   .menu-popup.active {
