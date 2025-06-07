@@ -14,7 +14,9 @@ declare global {
     }
   }
 
-  type VitePluginConfig = ConstructorParameters<typeof import('@electron-forge/plugin-vite').VitePlugin>[0];
+  type VitePluginConfig = ConstructorParameters<
+    typeof import('@electron-forge/plugin-vite').VitePlugin
+  >[0];
 
   interface VitePluginRuntimeKeys {
     VITE_DEV_SERVER_URL: `${string}_VITE_DEV_SERVER_URL`;
