@@ -1,4 +1,4 @@
-import { sendToRenderer } from 'src/webContents';
+import { sendToRenderer } from '@/webContents';
 
 export type WindowState = 'minimized' | 'normal' | 'maximized' | 'full-screen' | 'hidden';
 

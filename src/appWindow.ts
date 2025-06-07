@@ -3,9 +3,9 @@ import { BrowserWindow, Menu, app } from 'electron';
 
 import windowStateKeeper from 'electron-window-state';
 
-import { registerMenuIpc } from 'src/ipc/menuIPC';
-import appMenu from 'src/menu/appMenu';
-import { registerWindowStateChangedEvents } from 'src/windowState';
+import { registerMenuIpc } from '@/ipc/menuIPC';
+import appMenu from '@/menu/appMenu';
+import { registerWindowStateChangedEvents } from '@/windowState';
 
 let appWindow: BrowserWindow;
 

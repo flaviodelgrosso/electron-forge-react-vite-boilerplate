@@ -1,11 +1,11 @@
 import type React from 'react';
 import { createRef, useMemo, useRef } from 'react';
 
+import { MenuChannels } from '@/channels/menuChannels';
+import { fixAcceleratorText } from '@/menu/accelerators';
+import menuList from '@/menu/appMenu';
+import { useEventListener } from '@/ui/hooks';
 import appLogo from 'assets/icons/icon.png';
-import { MenuChannels } from 'src/channels/menuChannels';
-import { fixAcceleratorText } from 'src/menu/accelerators';
-import menuList from 'src/menu/appMenu';
-import { useEventListener } from 'src/ui/hooks';
 
 export default function Menu() {
   const activeMenuIndex = useRef<number | null>(null);

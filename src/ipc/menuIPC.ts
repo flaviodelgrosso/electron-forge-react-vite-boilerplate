@@ -1,6 +1,6 @@
 import { BrowserWindow, Menu, ipcMain, shell } from 'electron';
 
-import { MenuChannels } from 'src/channels/menuChannels';
+import { MenuChannels } from '@/channels/menuChannels';
 
 export const registerMenuIpc = (mainWindow: BrowserWindow) => {
   ipcMain.on(MenuChannels.EXECUTE_MENU_ITEM_BY_ID, (event, id) => {

@@ -1,5 +1,5 @@
-import { MenuChannels } from 'src/channels/menuChannels';
-import { emitEvent } from 'src/webContents';
+import { MenuChannels } from '@/channels/menuChannels';
+import { emitEvent } from '@/webContents';
 
 const MenuItems: Electron.MenuItemConstructorOptions[] = [
   {
