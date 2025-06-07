@@ -21,7 +21,7 @@ export default function App() {
         <Titlebar>
           {(windowState) => (
             <>
-              {!__WIN32__ && (
+              {__WIN32__ && (
                 <>
                   <Menu />
                   <WindowControls windowState={windowState} />
