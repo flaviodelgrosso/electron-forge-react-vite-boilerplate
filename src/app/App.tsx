@@ -1,12 +1,9 @@
-import { Route, HashRouter as Router, Routes } from 'react-router-dom';
-
-import Menu from '@/app/components/menu';
 import { ThemeProvider } from '@/app/components/theme-provider';
 import Titlebar from '@/app/components/titlebar';
-import WindowControls from '@/app/components/window-controls';
 import { useRendererListener } from '@/app/hooks';
 import { LandingScreen } from '@/app/screens/landing';
 import { MenuChannels } from '@/channels/menuChannels';
+import { Route, HashRouter as Router, Routes } from 'react-router-dom';
 
 const onMenuEvent = (_: Electron.IpcRendererEvent, channel: string, ...args: unknown[]) => {
   electron.ipcRenderer.invoke(channel, args);
@@ -18,18 +15,7 @@ export default function App() {
   return (
     <ThemeProvider defaultTheme="dark" storageKey="vite-ui-theme">
       <Router>
-        <Titlebar>
-          {(windowState) => (
-            <>
-              {__WIN32__ && (
-                <>
-                  <Menu />
-                  <WindowControls windowState={windowState} />
-                </>
-              )}
-            </>
-          )}
-        </Titlebar>
+        <Titlebar />
         <Routes>
           <Route path="/" Component={LandingScreen} />
         </Routes>
