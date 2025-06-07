@@ -147,10 +147,10 @@ The project uses Electron Forge for building and packaging. You can customize th
 
 The boilerplate is designed to be easily extensible:
 
-1. **New UI Components** - Add to `src/ui/components/`
-2. **New Screens** - Add to `src/ui/screens/`
+1. **New UI Components** - Add to `src/app/components/`
+2. **New Screens** - Add to `src/app/screens/`
 3. **IPC Channels** - Define in `src/channels/` and handle in `src/ipc/`
-4. **Styling** - Use TailwindCSS classes in your components or create custom styles in `src/ui/styles/`
+4. **Styling** - Use TailwindCSS classes in your components or create custom styles in `src/app/styles/`
 
 ## 🤝 Contributing
 

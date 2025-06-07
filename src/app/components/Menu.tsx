@@ -1,10 +1,10 @@
 import type React from 'react';
 import { createRef, useMemo, useRef } from 'react';
 
+import { useEventListener } from '@/app/hooks';
 import { MenuChannels } from '@/channels/menuChannels';
 import { fixAcceleratorText } from '@/menu/accelerators';
 import menuList from '@/menu/appMenu';
-import { useEventListener } from '@/ui/hooks';
 import appLogo from 'assets/icons/icon.png';
 
 export default function Menu() {

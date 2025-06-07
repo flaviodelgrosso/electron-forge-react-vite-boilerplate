@@ -2,9 +2,9 @@ import classNames from 'classnames';
 import type React from 'react';
 import { useState } from 'react';
 
-import { MenuChannels } from 'src/channels/menuChannels';
-import { useRendererListener } from 'src/ui/hooks';
-import type { WindowState } from 'src/windowState';
+import { useRendererListener } from '@/app/hooks';
+import { MenuChannels } from '@/channels/menuChannels';
+import type { WindowState } from '@/windowState';
 
 interface ITitleBarProps {
   children: (props: WindowState) => React.ReactNode;

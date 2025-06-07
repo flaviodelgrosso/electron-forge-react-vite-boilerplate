@@ -1,7 +1,7 @@
-import { createRoot } from 'react-dom/client';
+import '@/app/styles/globals.css';
 
-import '@/ui/globals.css';
-import App from '@/ui/App';
+import App from '@/app/App';
+import { createRoot } from 'react-dom/client';
 
 const container = document.getElementById('root') as HTMLDivElement;
 const root = createRoot(container);

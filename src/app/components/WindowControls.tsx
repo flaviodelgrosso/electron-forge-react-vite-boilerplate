@@ -1,9 +1,9 @@
 import classNames from 'classnames';
 import { useCallback } from 'react';
 
-import ControlButton from '@/ui/components/ControlButton';
-import { MenuChannels } from 'src/channels/menuChannels';
-import type { WindowState } from 'src/windowState';
+import ControlButton from '@/app/components/ControlButton';
+import { MenuChannels } from '@/channels/menuChannels';
+import type { WindowState } from '@/windowState';
 
 // These paths are all drawn to a 10x10 view box and replicate the symbols on Windows controls.
 const closePath =
