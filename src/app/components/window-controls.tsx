@@ -1,7 +1,7 @@
 import classNames from 'classnames';
 import { useCallback } from 'react';
 
-import ControlButton from '@/app/components/ControlButton';
+import ControlButton from '@/app/components/control-button';
 import { MenuChannels } from '@/channels/menuChannels';
 import type { WindowState } from '@/windowState';
 

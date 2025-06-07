@@ -1,9 +1,9 @@
 import { Route, HashRouter as Router, Routes } from 'react-router-dom';
 
-import Menu from '@/app/components/Menu';
-import Titlebar from '@/app/components/Titlebar';
-import WindowControls from '@/app/components/WindowControls';
+import Menu from '@/app/components/menu';
 import { ThemeProvider } from '@/app/components/theme-provider';
+import Titlebar from '@/app/components/titlebar';
+import WindowControls from '@/app/components/window-controls';
 import { useRendererListener } from '@/app/hooks';
 import { LandingScreen } from '@/app/screens/Landing';
 import { MenuChannels } from '@/channels/menuChannels';
