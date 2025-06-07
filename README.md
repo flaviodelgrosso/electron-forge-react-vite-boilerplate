@@ -14,6 +14,8 @@
 
 </div>
 
+![Screenshot](./screenshot.png)
+
 ---
 
 ## 🎯 Overview
@@ -59,20 +61,6 @@ The **Electron Forge React Vite Boilerplate** is your ultimate starting point fo
 - **Optimized Bundles** - Tree-shaking and code splitting for smaller app sizes
 - **Auto-Packaging** - One-command building and packaging
 - **Distribution Ready** - Pre-configured makers for various package formats
-
-## 🖼️ Screenshots
-
-<div align="center">
-
-### Windows
-
-![Windows Screenshot](./screenshots/window-win.png)
-
-### macOS
-
-![macOS Screenshot](./screenshots/window-mac.png)
-
-</div>
 
 ## 🚀 Quick Start
 
@@ -121,7 +109,7 @@ That's it! Your application will launch in development mode with hot reloading e
 ├── src/
 │   ├── main.ts              # Main Electron process
 │   ├── preload.ts           # Preload script for secure IPC
-│   ├── ui/                  # React application
+│   ├── app/                  # React application
 │   │   ├── App.tsx          # Main app component
 │   │   ├── components/      # Reusable UI components
 │   │   ├── screens/         # Application screens/pages
@@ -130,7 +118,6 @@ That's it! Your application will launch in development mode with hot reloading e
 │   └── @types/              # TypeScript declarations
 ├── config/                  # Vite configuration files
 ├── assets/                  # Static assets (icons, fonts, images)
-└── screenshots/             # Application screenshots
 ```
 
 ## 🔧 Configuration
