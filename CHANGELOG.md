@@ -2,6 +2,20 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [2.2.0](https://github.com/flaviodelgrosso/electron-forge-react-typescript-boilerplate/compare/v2.1.1...v2.2.0) (2025-06-07)
+
+
+### Features
+
+* add macOS-specific titlebar styling and app name display ([8ffb4f5](https://github.com/flaviodelgrosso/electron-forge-react-typescript-boilerplate/commit/8ffb4f5c06e976b0d4695ad8747568307f5ef418))
+
+
+### Bug Fixes
+
+* change import to type for globals in globals.d.ts ([788952e](https://github.com/flaviodelgrosso/electron-forge-react-typescript-boilerplate/commit/788952e93f84c1ebceeb69d3780c7466c7c3c88f))
+* update default formatter for JSON and JSONC files ([ae9d336](https://github.com/flaviodelgrosso/electron-forge-react-typescript-boilerplate/commit/ae9d3369f06e0dc77002631b8e8e2678f166a104))
+* update path resolution method in createAppWindow function ([6ed5b94](https://github.com/flaviodelgrosso/electron-forge-react-typescript-boilerplate/commit/6ed5b9478e9c8e0837b286393a336803840a29da))
+
 ### [2.1.1](https://github.com/flaviodelgrosso/electron-forge-react-typescript-boilerplate/compare/v2.1.0...v2.1.1) (2025-06-07)
 
 

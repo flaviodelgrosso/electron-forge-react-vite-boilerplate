@@ -1,7 +1,7 @@
 {
   "name": "electron-forge-react-vite-boilerplate",
   "productName": "EFRV Boilerplate",
-  "version": "2.1.1",
+  "version": "2.2.0",
   "description": "Electron-Forge React Vite Boilerplate.",
   "main": ".vite/build/main.js",
   "license": "MIT",
