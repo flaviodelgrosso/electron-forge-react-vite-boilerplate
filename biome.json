@@ -1,8 +1,5 @@
 {
   "$schema": "https://biomejs.dev/schemas/1.9.4/schema.json",
-  "files": {
-    "include": ["src/**/*.ts", "src/**/*.tsx", "config/**/*.ts"]
-  },
   "vcs": {
     "enabled": true,
     "clientKind": "git",
@@ -27,6 +24,11 @@
       "quoteProperties": "asNeeded",
       "quoteStyle": "single",
       "trailingCommas": "all"
+    }
+  },
+  "json": {
+    "formatter": {
+      "enabled": false
     }
   },
   "linter": {
