@@ -21,8 +21,18 @@ export default function Titlebar({ children }: ITitleBarProps) {
     setWindowState(windowState),
   );
 
+  // Hide titlebar in full screen mode on macOS
+  if (windowState === 'full-screen' && __DARWIN__) {
+    return null;
+  }
+
   return (
-    <div onDoubleClick={handleDoubleClick} className={classNames('window-titlebar')}>
+    <div
+      onDoubleClick={handleDoubleClick}
+      className={classNames('window-titlebar', {
+        darwin: __DARWIN__,
+      })}
+    >
       {children(windowState)}
     </div>
   );

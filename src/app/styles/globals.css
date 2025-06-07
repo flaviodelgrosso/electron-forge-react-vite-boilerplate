@@ -179,6 +179,11 @@
     @apply w-5 h-5;
   }
 
+  /* macOS-specific titlebar styling */
+  .window-titlebar.darwin {
+    @apply bg-background border-b border-border/50;
+  }
+
   /* Menu Styles */
   .menu-item {
     @apply relative;
