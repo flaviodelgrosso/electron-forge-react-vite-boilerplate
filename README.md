@@ -14,7 +14,10 @@
 
 </div>
 
-![Screenshot](./screenshot.png)
+<div align="center">
+  <img src="./screenshots/window-win.png" alt="Windows Screenshot" width="45%" style="margin-right: 10px;">
+  <img src="./screenshots/window-mac.png" alt="macOS Screenshot" width="45%">
+</div>
 
 ---
 
