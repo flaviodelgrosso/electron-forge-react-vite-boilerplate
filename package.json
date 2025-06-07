@@ -1,13 +1,20 @@
 {
   "name": "electron-forge-react-vite-boilerplate",
   "productName": "EFRV Boilerplate",
-  "version": "2.1.0",
+  "version": "2.1.1",
   "description": "Electron-Forge React Vite Boilerplate.",
   "main": ".vite/build/main.js",
   "license": "MIT",
   "packageManager": "pnpm@10.11.0",
   "type": "module",
-  "keywords": ["electron", "react", "typescript", "boilerplate", "electron-forge", "vite"],
+  "keywords": [
+    "electron",
+    "react",
+    "typescript",
+    "boilerplate",
+    "electron-forge",
+    "vite"
+  ],
   "author": {
     "name": "Flavio Del Grosso"
   },
@@ -16,7 +23,9 @@
     "url": "https://github.com/flaviodelgrosso/electron-forge-react-typescript-boilerplate.git"
   },
   "pnpm": {
-    "onlyBuiltDependencies": ["electron"]
+    "onlyBuiltDependencies": [
+      "electron"
+    ]
   },
   "scripts": {
     "dev": "cross-env NODE_ENV=development electron-forge start",

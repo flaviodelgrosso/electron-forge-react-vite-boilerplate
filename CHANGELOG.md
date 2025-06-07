@@ -2,6 +2,19 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [2.1.1](https://github.com/flaviodelgrosso/electron-forge-react-typescript-boilerplate/compare/v2.1.0...v2.1.1) (2025-06-07)
+
+
+### Features
+
+* add shadcn and landing page ([94223fd](https://github.com/flaviodelgrosso/electron-forge-react-typescript-boilerplate/commit/94223fd4e797b153db08241727b2d3cd3d54962d))
+
+
+### Bug Fixes
+
+* update color variables in globals.css for consistency ([0fb386e](https://github.com/flaviodelgrosso/electron-forge-react-typescript-boilerplate/commit/0fb386e5f3fc6b374778b709a2c003d03d86147d))
+* update conditional rendering for Menu and WindowControls on Windows ([105c639](https://github.com/flaviodelgrosso/electron-forge-react-typescript-boilerplate/commit/105c6399c3b9782bdd380a9f42ef4c6027676236))
+
 ## [2.1.0](https://github.com/flaviodelgrosso/electron-forge-react-typescript-boilerplate/compare/v2.0.0...v2.1.0) (2025-06-07)
 
 ### Features
