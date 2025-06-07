@@ -5,7 +5,7 @@ import { ModeToggle } from '../components/mode-toggle';
 
 export function LandingScreen() {
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900">
+    <div className="h-full bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900">
       {/* Header */}
       <header className="border-b border-white/10 backdrop-blur-sm bg-black/20">
         <div className="container mx-auto px-4 py-4 flex items-center justify-between">
@@ -42,8 +42,7 @@ export function LandingScreen() {
             <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
               <Button
                 size="lg"
-                variant="outline"
-                className="border-white/20 hover:bg-white/10 px-8 py-3"
+                className="bg-black/20 hover:bg-black/10 text-white font-semibold shadow-lg transition-colors"
                 onClick={() => {
                   window.open(
                     'https://github.com/flaviodelgrosso/electron-forge-react-vite-boilerplate',

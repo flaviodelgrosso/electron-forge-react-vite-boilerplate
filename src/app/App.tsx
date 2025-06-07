@@ -15,10 +15,14 @@ export default function App() {
   return (
     <ThemeProvider defaultTheme="dark" storageKey="vite-ui-theme">
       <Router>
-        <Titlebar />
-        <Routes>
-          <Route path="/" Component={LandingScreen} />
-        </Routes>
+        <div className="flex flex-col h-full">
+          <Titlebar />
+          <main className="flex-1 overflow-auto">
+            <Routes>
+              <Route path="/" Component={LandingScreen} />
+            </Routes>
+          </main>
+        </div>
       </Router>
     </ThemeProvider>
   );
