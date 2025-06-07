@@ -14,10 +14,8 @@
 
 </div>
 
-<div align="center">
-  <img src="./screenshots/window-win.png" alt="Windows Screenshot" width="45%" style="margin-right: 10px;">
-  <img src="./screenshots/window-mac.png" alt="macOS Screenshot" width="45%">
-</div>
+![![Windows Screenshot](./screenshots/window-win.png)](./screenshots/window-win.png)
+[![macOS Screenshot](./screenshots/window-mac.png)](./screenshots/window-mac.png)
 
 ---
 
