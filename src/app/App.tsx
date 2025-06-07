@@ -5,7 +5,7 @@ import { ThemeProvider } from '@/app/components/theme-provider';
 import Titlebar from '@/app/components/titlebar';
 import WindowControls from '@/app/components/window-controls';
 import { useRendererListener } from '@/app/hooks';
-import { LandingScreen } from '@/app/screens/Landing';
+import { LandingScreen } from '@/app/screens/landing';
 import { MenuChannels } from '@/channels/menuChannels';
 
 const onMenuEvent = (_: Electron.IpcRendererEvent, channel: string, ...args: unknown[]) => {
