@@ -35,7 +35,7 @@ The **Electron Forge React Vite Boilerplate** is your ultimate starting point fo
 
 - **Custom Titlebar** - Native-looking titlebar with integrated window controls
 - **Responsive Design** - Adaptive layouts that work across different screen sizes
-- **Modern Styling** - SASS-powered styling system with theme support
+- **Modern Styling** - TailwindCSS v4 styling system with theme support
 - **Cross-Platform Consistency** - Unified experience across Windows, macOS, and Linux
 
 ### 🔧 **Development Tools**
@@ -125,7 +125,6 @@ That's it! Your application will launch in development mode with hot reloading e
 │   │   ├── App.tsx          # Main app component
 │   │   ├── components/      # Reusable UI components
 │   │   ├── screens/         # Application screens/pages
-│   │   └── styles/          # SASS stylesheets
 │   ├── menu/                # Application menu configuration
 │   ├── ipc/                 # IPC handlers and channels
 │   └── @types/              # TypeScript declarations
@@ -151,7 +150,7 @@ The boilerplate is designed to be easily extensible:
 1. **New UI Components** - Add to `src/ui/components/`
 2. **New Screens** - Add to `src/ui/screens/`
 3. **IPC Channels** - Define in `src/channels/` and handle in `src/ipc/`
-4. **Styling** - Extend the SASS system in `src/ui/styles/`
+4. **Styling** - Use TailwindCSS classes in your components or create custom styles in `src/ui/styles/`
 
 ## 🤝 Contributing
 

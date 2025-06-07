@@ -1,6 +1,7 @@
 import { type ConfigEnv, defineConfig } from 'vite';
 import svgrPlugin from 'vite-plugin-svgr';
 
+import tailwindcss from '@tailwindcss/vite';
 import { checker } from 'vite-plugin-checker';
 import viteTsconfigPaths from 'vite-tsconfig-paths';
 import { productName, version } from '../package.json';
@@ -33,6 +34,7 @@ export default defineConfig((env) => {
           command: 'check',
         },
       }),
+      tailwindcss(),
     ],
     define: {
       __DARWIN__: process.platform === 'darwin',
