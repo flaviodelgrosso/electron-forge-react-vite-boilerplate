@@ -84,7 +84,7 @@
   }
 
   .menu-popup {
-    @apply hidden fixed bg-gray-100 border border-gray-200 z-[10000];
+    @apply hidden fixed bg-gray-100 border border-gray-200 z-10000;
     min-width: 70px;
     padding: 0.25rem 0;
     box-shadow: 2px 1px 4px rgba(71, 83, 95, 0.19);
