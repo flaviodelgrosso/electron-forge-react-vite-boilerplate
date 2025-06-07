@@ -2,6 +2,8 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [2.2.1](https://github.com/flaviodelgrosso/electron-forge-react-typescript-boilerplate/compare/v2.2.0...v2.2.1) (2025-06-07)
+
 ## [2.2.0](https://github.com/flaviodelgrosso/electron-forge-react-typescript-boilerplate/compare/v2.1.1...v2.2.0) (2025-06-07)
 
 
