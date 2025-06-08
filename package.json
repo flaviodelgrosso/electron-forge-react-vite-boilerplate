@@ -1,8 +1,8 @@
 {
-  "name": "electron-forge-react-vite-boilerplate",
-  "productName": "EFRV Boilerplate",
+  "name": "reactronite",
+  "productName": "Reactronite",
   "version": "2.2.1",
-  "description": "Electron-Forge React Vite Boilerplate.",
+  "description": "A modern, feature-rich Electron kit for building cross-platform desktop applications",
   "main": ".vite/build/main.js",
   "license": "MIT",
   "packageManager": "pnpm@10.11.0",
