@@ -1,4 +1,4 @@
-# 🚀 Electron Forge React Vite Boilerplate
+# ⚛ Reactronite ⚛
 
 <div align="center">
 
@@ -8,7 +8,7 @@
 [![Electron](https://img.shields.io/badge/Electron-191970?style=flat&logo=Electron&logoColor=white)](https://electronjs.org/)
 [![Vite](https://img.shields.io/badge/Vite-646CFF?style=flat&logo=vite&logoColor=white)](https://vitejs.dev/)
 
-**A modern, feature-rich boilerplate for building cross-platform desktop applications**
+**A modern, feature-rich Electron kit for building cross-platform desktop applications with React and Vite**
 
 [Features](#-features) • [Quick Start](#-quick-start) • [Documentation](#-documentation) • [Contributing](#-contributing)
 
