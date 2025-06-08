@@ -1,4 +1,4 @@
-# Contributing to [project name]
+# Contributing to Reactronite
 
 Thank you for your interest in contributing to this project! Here are some guidelines to help you get started.
 
