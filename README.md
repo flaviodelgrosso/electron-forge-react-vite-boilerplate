@@ -10,12 +10,12 @@
 
 **A modern, feature-rich Electron kit for building cross-platform desktop applications with React and Vite**
 
-[Features](#-features) • [Quick Start](#-quick-start) • [Documentation](#-documentation) • [Contributing](#-contributing)
+[Features](#-features) • [Quick Start](#-quick-start) • [Configuration](#-configuration) • [Contributing](#-contributing)
 
 </div>
 
-![![Windows Screenshot](./screenshots/window-win.png)](./screenshots/window-win.png)
-[![macOS Screenshot](./screenshots/window-mac.png)](./screenshots/window-mac.png)
+![Windows Screenshot](./screenshots/window-win.png)
+![macOS Screenshot](./screenshots/window-mac.png)
 
 ---
 
