@@ -3,10 +3,10 @@ import { emitEvent } from '@/webContents';
 
 const MenuItems: Electron.MenuItemConstructorOptions[] = [
   {
-    label: 'EFRV Boilerplate',
+    label: 'Reactronite',
     submenu: [
       {
-        label: 'About EFRV Boilerplate',
+        label: 'About Reactronite',
       },
       {
         type: 'separator',
