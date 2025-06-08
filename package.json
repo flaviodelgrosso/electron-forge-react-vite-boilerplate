@@ -20,7 +20,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/flaviodelgrosso/electron-forge-react-typescript-boilerplate.git"
+    "url": "https://github.com/flaviodelgrosso/reactronite.git"
   },
   "pnpm": {
     "onlyBuiltDependencies": [

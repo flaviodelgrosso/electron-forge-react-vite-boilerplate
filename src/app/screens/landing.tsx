@@ -44,10 +44,7 @@ export function LandingScreen() {
                 size="lg"
                 className="bg-black/20 hover:bg-black/10 text-white font-semibold shadow-lg transition-colors"
                 onClick={() => {
-                  window.open(
-                    'https://github.com/flaviodelgrosso/electron-forge-react-vite-boilerplate',
-                    '_blank',
-                  );
+                  window.open('https://github.com/flaviodelgrosso/reactronite', '_blank');
                 }}
               >
                 <Github className="w-5 h-5 mr-2" />

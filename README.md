@@ -21,9 +21,9 @@
 
 ## 🎯 Overview
 
-The **Electron Forge React Vite Boilerplate** is your ultimate starting point for creating modern, performant desktop applications. This carefully crafted template combines the power of Electron with the speed of Vite, the flexibility of React, and the safety of TypeScript to deliver an exceptional development experience.
+The **Reactronite** is your ultimate starting point for creating modern, performant desktop applications. This carefully crafted template combines the power of Electron with the speed of Vite, the flexibility of React, and the safety of TypeScript to deliver an exceptional development experience.
 
-### Why This Boilerplate?
+### Why This Kit?
 
 - 🏗️ **Production-Ready Architecture** - Clean, scalable project structure with separation of concerns
 - ⚡ **Lightning Fast Development** - Hot Module Replacement (HMR) with Vite for instant feedback
@@ -77,8 +77,8 @@ Make sure you have the following installed:
 1. **Clone the repository**
 
    ```bash
-   git clone https://github.com/flaviodelgrosso/electron-forge-react-typescript-boilerplate.git
-   cd electron-forge-react-vite-boilerplate
+   git clone https://github.com/flaviodelgrosso/reactronite.git
+   cd reactronite
    ```
 
 2. **Install dependencies**
@@ -158,7 +158,7 @@ This project is licensed under the [MIT License](./LICENSE) - feel free to use i
 
 <div align="center">
 
-**[⭐ Star this repo](https://github.com/flaviodelgrosso/electron-forge-react-typescript-boilerplate)** if you found it helpful!
+**[⭐ Star this repo](https://github.com/flaviodelgrosso/reactronite)** if you found it helpful!
 
 Made with ❤️ by [Flavio Del Grosso](https://github.com/flaviodelgrosso)
 
